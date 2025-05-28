@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Infografía: Cambio Climático</title>
+<link rel="stylesheet" href="contenido.css">
+</head>
+<body>
+<header>
+<h1>🌍 Cambio Climático: Nuestro Futuro en Juego</h1>
+<p>Descubre por qué es urgente actuar hoy.</p>
+</header>
+ 
+    <main>
+<section class="infografia">
+<div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Polar_bear_on_ice_2015-07-16.jpg" alt="Oso polar en el hielo">
+<h2>Hielo en retroceso</h2>
+<p>El Ártico pierde 13% de su hielo marino por década. Es hogar de especies como el oso polar, que ya están en peligro.</p>
+</div>
+ 
+            <div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Air_pollution_by_traffic.jpg" alt="Contaminación del aire">
+<h2>Contaminación</h2>
+<p>Las emisiones de CO₂ alcanzan niveles históricos. El transporte y la industria son grandes responsables.</p>
+</div>
+ 
+            <div class="card">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Deforestation_Amazon.jpg" alt="Deforestación del Amazonas">
+<h2>Deforestación</h2>
+<p>Cada año se pierden millones de hectáreas de bosques. Esto reduce la absorción natural de CO₂.</p>
+</div>
+</section>
+ 
+        <section class="llamado">
+<h2>¿Qué puedes hacer?</h2>
+<ul>
+<li>🚲 Usa medios de transporte sostenibles</li>
+<li>🌱 Reduce, reutiliza y recicla</li>
+<li>⚡ Ahorra energía en casa</li>
+<li>🗳️ Apoya políticas climáticas</li>
+</ul>
+<button id="btn-accion">Me comprometo</button>
+<p id="mensaje-compromiso"></p>
+</section>
+</main>
+ 
+    <footer>
+<p>Infografía creada por defensores del planeta 🌎</p>
+</footer>
+ 
+    <script src="contenido.js"></script>
+</body>
+</html>
+
+ 
+body {
+
+    margin: 0;
+
+    font-family: 'Arial', sans-serif;
+
+    background-color: #f5f9f6;
+
+    color: #333;
+
+}
+ 
+header {
+
+    background: #00796b;
+
+    color: white;
+
+    padding: 2em;
+
+    text-align: center;
+
+}
+ 
+h1 {
+
+    margin-bottom: 0.3em;
+
+}
+ 
+main {
+
+    padding: 2em;
+
+}
+ 
+.infografia {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    justify-content: center;
+
+}
+ 
+.card {
+
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    max-width: 300px;
+
+    text-align: center;
+
+    padding: 1em;
+
+    transition: transform 0.3s ease;
+
+}
+ 
+.card:hover {
+
+    transform: scale(1.03);
+
+}
+ 
+.card img {
+
+    max-width: 100%;
+
+    border-radius: 8px;
+
+}
+ 
+.llamado {
+
+    margin-top: 3em;
+
+    background-color: #c8e6c9;
+
+    padding: 2em;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+}
+ 
+.llamado ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    margin: 1em 0;
+
+}
+ 
+.llamado li {
+
+    font-size: 1.2em;
+
+    margin: 0.5em 0;
+
+}
+ 
+button {
+
+    background-color: #388e3c;
+
+    color: white;
+
+    padding: 1em 2em;
+
+    border: none;
+
+    font-size: 1em;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: background 0.3s ease;
+
+}
+ 
+button:hover {
+
+    background-color: #2e7d32;
+
+}
+ 
+#mensaje-compromiso {
+
+    margin-top: 1em;
+
+    font-weight: bold;
+
+    color: #1b5e20;
+
+}
+ 
+footer {
+
+    background: #004d40;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 1em;
+
+    margin-top: 3em;
+
+}
+
+ 
+document.getElementById("btn-accion").addEventListener("click", function () {
+
+    const mensaje = document.getElementById("mensaje-compromiso");
+
+    mensaje.textContent = "¡Gracias por comprometerte! 🌿 Juntos podemos marcar la diferencia.";
+
+    mensaje.style.opacity = 0;
+
+    let opacity = 0;
+
+    const fadeIn = setInterval(() => {
+
+        if (opacity >= 1) {
+
+            clearInterval(fadeIn);
+
+        } else {
+
+            opacity += 0.05;
+
+            mensaje.style.opacity = opacity;
+
+        }
+
+    }, 50);
+
+});
+
+ 
